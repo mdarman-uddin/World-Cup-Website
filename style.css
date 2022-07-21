@@ -1,25 +1,37 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&family=Poppins:wght@500&family=Ubuntu&display=swap');
+/* Basic Style */
 * { margin: 0;
      padding: 0;
      box-sizing: border-box;
     
  }
+ body{
+    font-family:'Poppins', sans-serif; ;
+    max-width: 1240px;
+    margin: 0 auto;
+}
  
  .btn{
      text-decoration: none;
      display: inline-block;
      background-color: red;
      color: #fff;
-     padding: 10px 20px;
+     padding: 10px 35px;
      border-radius: 5px;
      margin-top: 25px;
+     margin-bottom: 25px;
+     text-align: center;
  }
- body{
-     font-family: "poppins";
- }
+.btn:hover{
+    font-size: xx-large;
+    transition: linear;
+}
+
  /* header style */
  #header {
-     width: 80%;
-     height: 500px;
+     width: 100%;
+     height: 100vh;
      background-color: black;
      display: flex;
      align-items: center;
@@ -28,12 +40,14 @@
      border-radius: 20px;
      margin: auto;
  }
-h1 {
-     font-size: xx-large;
+ #title{
+     font-size: 2em;
      font-weight: 1000;
 }
-p{
-    font-size: large;
+#title-para{
+    font-size: 1em;
+    color: azure;
+    margin: 20px 0";
 }
  .header-title{
      width: 50%;
@@ -41,13 +55,14 @@ p{
  
  .header-image{
      width: 50%;
+     margin: 0 auto;
  }
  .header-image img{
-     width: 80%;
+     width: 90%;
  }
   /* blog-section style */
   #blog-section{
-     width: 80%;
+     width: 100%;
      background-color:white;
      display: flex;
      color: white;
@@ -58,23 +73,25 @@ p{
   }
   #blog-container1{
     background-color: black;
-    width: 20%;
-    height: 240px;
+    width: 25%;
+    height: 320px;
     text-align: center;
     border-radius: 10px;
-    padding-top: 30px;
+    padding-top: 50px;
     margin-top: 10px;
 
   }
   .btn2{
-    width: 85%;
+    width: 80%;
     text-decoration: none;
     display: inline-block;
     background-color:white;
     color: black;
-    padding: 10px 30px;
+    padding: 15px 25px;
+    border: 1px solid rgb(124, 106, 106);
     border-radius: 5px;
-    margin-top: 25px;
+    margin-top: 10px;
+
   }
   #grid-container{
     width: 80%;
@@ -83,17 +100,16 @@ p{
     grid-template-columns: repeat(3, 1fr);
     background-color:white;
     justify-content: space-between;
-    column-gap: 10px;
-    row-gap: 10px;
+    gap: 30px;
     
   }
   .card{
     width: 100%;
-    height: 350px;
+    height: 420px;
     border: 2px solid lavenderblush;
     border-radius: 10px;
     color: black;
-    text-align: left;
+    align-items: center;
     margin-left:10px;
   }
   .card img{
@@ -104,7 +120,7 @@ p{
     width: 40%;
     text-decoration: none;
     display: inline-block;
-    background-color:white;
+    background-color: linen;
     color: black;
     padding: 10px 10px;
     border-radius: 5px;
@@ -112,12 +128,14 @@ p{
     margin: 10px;
   }
 .icon{
-    margin: 10px;
+    margin: 0 auto;
+    padding-left: 10px;
+    
 }
  /* footer-section style */
  #footer{
     width: 100%;
-    height: 400px;
+    height: 120vh;
     background-color: black;
     margin-top: 100px;
  }
@@ -139,3 +157,116 @@ p{
     justify-content: space-evenly;
     padding-top: 50px;
  }
+ #social-icons{
+    display: flex;
+    font-size: xx-large;
+    justify-content:space-evenly ;
+    margin: 100px 100px; 
+ }
+ .s-icon{
+    color: tomato;
+    text-decoration: none;
+ }
+  /* Media-query style for mobile and small device*/
+  @media  only screen and (max-width: 576px){
+    #header{
+     height: 170vh;
+     flex-direction: column;
+    }
+    .header-image{
+        width: 90%;  
+    }
+    #blog-section{
+        flex-direction: column;
+        align-items: center;
+      
+    }
+    #blog-container1{
+        background-color:white;
+        width: 50%;
+        height: 300px;
+        padding-top:40px;
+        margin-bottom: 10px;
+}
+#grid-container{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    
+  }
+  #footer-container{
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    gap: 25px;
+ }
+}
+   /* Media-query style for tablet or medium device*/
+ @media only screen and (min-width:577px ) and (max-width: 768px){
+
+    #blog-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn2{
+        width: 100%;
+        padding: 20px 40px; 
+        margin: 0 auto;
+    }
+
+    #blog-container1{
+        background-color:white;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: -200px;
+        margin-top: -50px;
+    }
+    #grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
+.card:nth-last-child(-n+3){
+    display: none;
+}
+ 
+ /* website-1 or matches-style */
+ }
+ .card2{
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgb(236, 213, 221);
+    border-radius: 10px;
+
+ }
+ .flag-card{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+
+ }
+ .flag{
+    padding: 20px;
+ }
+.text{
+    color: black;
+    font: 400;
+    padding: 50px;
+}
+ /* website-2 or Groups-style */
+.card3{
+    width: 100%;
+    height: 420px;
+    border: 1px solid rgb(236, 213, 221);
+    border-radius: 10px;
+    color: black;
+    align-items: center;
+    padding:40px;
+    background-color: lightcoral;
+ }
+ .card3 img{
+    width: 15%;
+ }
+.groups-flag{
+    padding: 15px;
+}
